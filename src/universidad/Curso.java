@@ -5,6 +5,8 @@
  */
 package universidad;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Administrador
@@ -12,9 +14,12 @@ package universidad;
 public class Curso {
     private int nrc;
     private Profesor profesor;
+    private Estudiante estudiante;
+    ArrayList<Estudiante> estudiantes;
 
     public Curso(int nrc) {
         this.nrc = nrc;
+        estudiantes = new ArrayList();  
     }
 
     public int getNrc() {
@@ -30,6 +35,20 @@ public class Curso {
             this.profesor = profesor;
         }
     }
+    public Estudiante getEstudiante() {
+        return estudiante;
+    }
+
+    public void setEstudiante(Estudiante estudiante) {
+        if (this.estudiante == null){
+            this.estudiante = estudiante;
+        }
+    }
+
+    void setProfesor(Estudiante e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
     
     
